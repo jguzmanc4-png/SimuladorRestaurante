@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
+    
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -35,6 +37,21 @@ public class Main {
         System.out.print("Valor de bebidas: ");
         double bebidas = sc.nextDouble(); // <--- Tu lógica real de escaneo activa
 
+       double subtotal = platos + bebidas;
+       double propina = subtotal * 0.10;
+
+       double descuento = 0;
+
+if (subtotal > 100000) {
+descuento = subtotal * 0.05;
+}
+
+double total = subtotal + propina - descuento;
+
+System.out.println("Subtotal: " + subtotal);
+System.out.println("Propina: " + propina);
+System.out.println("Descuento: " + descuento);
+System.out.println("Total a pagar: " + total);
         // =========================================================
         // ESTRUCTURA DE CÁLCULOS GENERALES
         // (Serán perfeccionados por Dev 3 y Dev 4 al fusionar ramas)
@@ -43,9 +60,6 @@ public class Main {
         double propina = subtotal * 0.10;
         double total = subtotal + propina;
 
-        System.out.println("Subtotal: " + subtotal);
-        System.out.println("Propina: " + propina);
-        System.out.println("Total: " + total);
 
         sc.close();
     }
