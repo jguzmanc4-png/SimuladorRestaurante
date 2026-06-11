@@ -1,6 +1,6 @@
 Integrante:
 - Juan Adolfo Guzman Castro
-- .
+- Jhorlan Javi Martinez Acuña
 - .
 - .
 
