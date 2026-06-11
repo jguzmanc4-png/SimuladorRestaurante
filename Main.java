@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Main {
     
-// Funcionalidad: cálculo de platos principales
 
     public static void main(String[] args) {
 
@@ -14,13 +13,22 @@ public class Main {
         System.out.print("Valor de bebidas: ");
         double bebidas = sc.nextDouble();
 
-        double subtotal = platos + bebidas;
-        double propina = subtotal * 0.10;
-        double total = subtotal + propina;
+       double subtotal = platos + bebidas;
+       double propina = subtotal * 0.10;
 
-        System.out.println("Subtotal: " + subtotal);
-        System.out.println("Propina: " + propina);
-        System.out.println("Total: " + total);
+       double descuento = 0;
+
+if (subtotal > 100000) {
+descuento = subtotal * 0.05;
+}
+
+double total = subtotal + propina - descuento;
+
+System.out.println("Subtotal: " + subtotal);
+System.out.println("Propina: " + propina);
+System.out.println("Descuento: " + descuento);
+System.out.println("Total a pagar: " + total);
+
 
         sc.close();
     }
