@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     
+// Funcionalidad: cálculo de platos principales
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
